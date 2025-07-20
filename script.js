@@ -15,9 +15,9 @@ const evenNumArr = (arr) => {
 		}, 1000)
 	})
 }
-const multiplyByTwo = (arr) => {
+const multiplyArr = (arr) => {
 	return new Promise((resolve, reject) => {
-		setTimout(() => {
+		setTimeout(() => {
 			const result = arr.map((item) => item * 2);
 			document.getElementById('output').textContent = result;
 			resolve(result);
@@ -26,4 +26,4 @@ const multiplyByTwo = (arr) => {
 }
 initialPromise()
 .then(evenNumArr)
-.then(multiplyByTwo)
+.then(multiplyArr)
